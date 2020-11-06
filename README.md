@@ -2,6 +2,9 @@
 
 Aplicación que permite llevar el control de las notas de los alumnos.
 
+contiene un menú con opciones para cargar archivo con datos, crear alumno, agregar materia a
+alumno, agregar notas y exportar datos a un archivo archivo.
+
 # Construido con...
 
 Java orientado a objetos
