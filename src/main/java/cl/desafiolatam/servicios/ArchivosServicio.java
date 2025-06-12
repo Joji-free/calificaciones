@@ -44,7 +44,7 @@ public class ArchivosServicio {
 						}
 						else
 						{
-							if(alumnosACargar.stream().filter(x->x.getRut().equals(fila[0])).collect(Collectors.toList()).size()>0)
+							if(alumnosACargar.stream().filter(x->x.getId().equals(fila[0])).collect(Collectors.toList()).size()>0)
 							{
 								//alumno ya existe
 							}
@@ -58,7 +58,7 @@ public class ArchivosServicio {
 						alumnosACargar.forEach(
 								(alumno)->
 								{
-									if(alumno.getRut().equals(fila[0]))
+									if(alumno.getId().equals(fila[0]))
 									{
 										if(fila[2].equals("MATEMATICAS"))
 										{
@@ -125,7 +125,7 @@ public class ArchivosServicio {
 			alumnos.forEach(
 					(key, alumno) -> 
 					{
-						pw.write("Alumno : " + alumno.getRut() + " - " + alumno.getNombre());
+						pw.write("Alumno : " + alumno.getId() + " - " + alumno.getNombre());
 						for(Materia materia : alumno.getMaterias())
 						{
 							pw.println("\tMateria :" + materia.getNombre() + " - Promedio : "+ promServicio.calcularPromedio(materia.getNotas()));
