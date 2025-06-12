@@ -25,7 +25,7 @@ public class AlumnoServicio {
 
 	public void crearAlumno(Alumno alumno)
 	{
-		listaAlumnos.put(alumno.getRut(), alumno);
+		listaAlumnos.put(alumno.getId(), alumno);
 	}
 	
 	public void agregarMateria(String rutAlumno, Materia currentMate)
